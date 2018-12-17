@@ -40,3 +40,5 @@ class NewPlayerForm extends React.Component {
     )
   }
 }
+
+export default NewPlayerForm;
