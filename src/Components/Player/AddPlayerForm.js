@@ -1,6 +1,6 @@
 import React from 'react';
 
-class NewPlayerForm extends React.Component {
+class AddPlayerForm extends React.Component {
   constructor(props) {
     super(props);
 
@@ -41,4 +41,4 @@ class NewPlayerForm extends React.Component {
   }
 }
 
-export default NewPlayerForm;
+export default AddPlayerForm;

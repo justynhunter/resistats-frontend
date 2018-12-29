@@ -1,6 +1,6 @@
 import React from 'react';
 import PlayerList from './PlayerList';
-import NewPlayerForm from './NewPlayerForm';
+import AddPlayerForm from './AddPlayerForm';
 
 class PlayerSelector extends React.Component {
   constructor(props) {
@@ -23,7 +23,7 @@ class PlayerSelector extends React.Component {
           <button onClick={this.addPlayer}>Add new player</button>
           {
             this.state.showNewPlayerForm
-            ? <NewPlayerForm/>
+            ? <AddPlayerForm addPlayerHandler={this.props.addPlayerHandler}/>
             : null
           }
         </div>
