@@ -21,7 +21,7 @@ class NewPlayerForm extends React.Component {
   }
 
   submitForm = () => {
-    this.props.handleSubmit(this.state);
+    this.props.addPlayerHandler(this.state);
     this.setState(this.initialState);
   }
 
