@@ -2,26 +2,23 @@ import React from 'react';
 
 class RecentGameList extends React.Component {
   render() {
-    const {games} = this.props;
+    console.log(this.props);
+    const {Games} = this.props;
 
-    const items = games.map((item, index) => {
-      return (
-        <tr key={index}>
-          <td>{item.datePlayed}</td>
-          <td>{item.winner}</td>
-          <td><a href={"/game/" + item.game_id}>Details</a></td>
+    const rows = Games.map((game) => 
+        <tr>
+          <td>{game.datePlayed.toString()}</td>
+          <td>{game.winner}</td>
+          <td><a href={"/game/" + game.game_id}>Details</a></td>
         </tr>
-      )
-    })
+    );
+
     return (
       <table>
-        <thead>
-          <tH>Date Played</tH>
-          <th>Winner</th>
-          <th></th>
-        </thead>
-        {items}
+        {rows}
       </table>
-    )
+    );
   }
 }
+
+export default RecentGameList;
